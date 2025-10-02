@@ -1,0 +1,129 @@
+:root {
+  --accent:#e53935;   /* สีหลัก */
+  --black:#111;       /* ดำ */
+  --white:#fff;       /* ขาว */
+  --gray:#f7f7f7;     /* เทาอ่อน */
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body { 
+  font-family: "Segoe UI", Roboto, Arial, sans-serif; 
+  background: var(--white); 
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* ---------- Navbar ---------- */
+.navbar { 
+  border-bottom: 1px solid #eee; 
+  background: var(--white);
+}
+.navbar-brand { 
+  font-weight: 900; 
+  letter-spacing: 1px; 
+  color: var(--black) !important;
+}
+.nav-link { 
+  font-weight: 500; 
+  color: var(--black) !important;
+}
+.nav-link:hover { 
+  color: var(--accent) !important; 
+}
+.btn-accent { 
+  background: var(--black); 
+  color: var(--white); 
+  border-radius: 30px; 
+  padding: 8px 20px; 
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn-accent:hover { 
+  background: var(--accent); 
+  color: #fff; 
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  background: url('../upload/nike1.png') center/cover no-repeat;
+  height: 90vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero::after {
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.hero .content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* ---------- Product Card ---------- */
+.product-card {
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: transform .2s, box-shadow .2s;
+  background: var(--white);
+}
+.product-card:hover { 
+  transform: translateY(-6px); 
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;   /* เปลี่ยนจาก contain → cover */
+  background: var(--gray);
+  display: block;      /* กันกระพริบ */
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+.card-body h5 { 
+  font-weight: 700; 
+  font-size: 1.1rem;
+}
+.card-body .price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* ---------- Footer ---------- */
+footer { 
+  padding: 25px; 
+  background: var(--black); 
+  color: #fff; 
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
